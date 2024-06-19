@@ -1,0 +1,40 @@
+ID: DMM_MOD
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: DMM_MOD_DB
+   type: hdb
+   path: DMM_MOD_DB
+   requires:
+    - name: hdi_DMM_MOD_DB
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_DMM_MOD_DB
+   parameters:
+      config:
+         schema: DMM_MOD_DB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: DMM_GRANTOR_SERVICE
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

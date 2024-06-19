@@ -1,0 +1,21 @@
+{
+  "role": {
+    "name": "CV_READ",
+    "object_privileges": [
+      {
+        "name": "first_calc_view",
+        "type": "VIEW",
+        "privileges": [
+          "SELECT"
+        ]
+      },
+      {
+        "name": "SalesOrder",
+        "type": "SYNONYM",
+        "privileges": [
+          "SELECT"
+        ]
+      }
+    ]
+  }
+}

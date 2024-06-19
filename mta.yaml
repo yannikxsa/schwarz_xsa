@@ -1,0 +1,41 @@
+ID: DMM_TEST_SETUP
+_schema-version: '2.1'
+description: DMM TEST SETUP
+version: 0.0.1
+
+modules:
+ - name: DMM_DB
+   type: hdb
+   path: DMM_DB
+   requires:
+    - name: hdi_DMM_DB
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+
+resources:
+ - name: hdi_DMM_DB
+   parameters:
+      config:
+         schema: DMM_SCHEMA
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: DMM_GRANTOR_SERVICE
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

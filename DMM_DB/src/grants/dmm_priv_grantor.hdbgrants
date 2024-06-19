@@ -1,0 +1,20 @@
+{
+  "DMM_GRANTOR_SERVICE":{
+    "object_owner":{
+      "schema_privileges":[  
+        {  
+          "reference":"DMM260",
+          "privileges_with_grant_option":["SELECT", "SELECT METADATA"]
+        }
+      ]
+    },
+    "application_user":{
+      "schema_privileges":[  
+        {  
+          "reference":"DMM260",
+          "privileges":["SELECT", "SELECT METADATA"]
+        }
+      ]
+    }  
+  }
+}

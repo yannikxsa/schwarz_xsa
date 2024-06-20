@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "SELECT_CONTAINER",
+		"schema_privileges": [
+			{
+				"privileges": [
+					"SELECT"
+				]
+			}
+		]
+	}
+}

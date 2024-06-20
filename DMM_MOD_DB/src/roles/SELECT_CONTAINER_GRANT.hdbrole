@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "SELECT_CONTAINER_GRANT#",
+		"schema_privileges": [
+			{
+				"privileges_with_grant_option": [
+					"SELECT"
+				]
+			}
+		]
+	}
+}

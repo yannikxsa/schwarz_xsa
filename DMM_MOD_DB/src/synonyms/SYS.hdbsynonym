@@ -1,0 +1,14 @@
+{
+  "sys.users": {
+    "target": {
+      "object": "USERS",
+      "schema": "SYS"
+    }
+  },
+  "sys.roles": {
+    "target": {
+      "object": "ROLES",
+      "schema": "SYS"
+    }
+  }
+}

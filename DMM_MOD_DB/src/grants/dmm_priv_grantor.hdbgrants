@@ -1,16 +1,48 @@
 {
-	"DMM_GRANTOR_SERVICE": {
-		"object_owner": {
-			"schema_privileges": [{
-				"reference": "DMM260",
-				"privileges_with_grant_option": ["SELECT", "SELECT METADATA"]
-			}]
-		},
-		"application_user": {
-			"schema_privileges": [{
-				"reference": "DMM260",
-				"privileges": ["SELECT", "SELECT METADATA"]
-			}]
+  "DMM_GRANTOR_SERVICE":{
+    "object_owner":{
+      "schema_privileges":[  
+        {  
+          "reference":"DMM260",
+          "privileges_with_grant_option":["EXECUTE", "SELECT", "SELECT METADATA"]
+        }
+	  ],    
+      "global_object_privileges" : [
+		{
+			"name": "REMOTE_TABLE_QUALITY_XS2",
+			"type": "REMOTE SOURCE",
+			"privileges": [
+				"CREATE VIRTUAL TABLE",
+				"CREATE VIRTUAL FUNCTION",
+				"CREATE REMOTE SUBSCRIPTION",
+				"PROCESS REMOTE SUBSCRIPTION EXCEPTION",
+				"ALTER",
+				"DROP"
+			]
 		}
-	}
+      ]
+    },
+    "application_user":{
+      "schema_privileges":[  
+        {  
+          "reference":"DMM260",
+          "privileges":["EXECUTE", "SELECT", "SELECT METADATA"]
+        }
+      ],    
+      "global_object_privileges" : [
+		{
+			"name": "REMOTE_TABLE_QUALITY_XS2",
+			"type": "REMOTE SOURCE",
+			"privileges": [
+				"CREATE VIRTUAL TABLE",
+				"CREATE VIRTUAL FUNCTION",
+				"CREATE REMOTE SUBSCRIPTION",
+				"PROCESS REMOTE SUBSCRIPTION EXCEPTION",
+				"ALTER",
+				"DROP"
+			]
+		}
+      ]
+    }  
+  }
 }

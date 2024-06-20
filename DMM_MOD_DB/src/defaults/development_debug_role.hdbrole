@@ -1,0 +1,17 @@
+{
+   "role":{
+	"name":"development_debug_role",
+	"object_privileges": [
+			{
+				"name": "CV_QUALITY",
+				"type": "VIEW",
+				"privileges": ["SELECT"]
+			}
+		],
+		"schema_analytic_privileges":[
+			{
+				"privileges":["AP_QUALITY"]
+			}
+		]
+	}
+}

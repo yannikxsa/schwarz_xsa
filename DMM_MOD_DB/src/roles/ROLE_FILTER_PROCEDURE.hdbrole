@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "ROLE_FILTER_PROCEDURE",
+		"object_privileges": [
+			{
+				"name": "FILTER_PROCEDURE",
+				"type": "PROCEDURE",
+				"privileges": ["EXECUTE"]
+			}
+		]
+	}
+}

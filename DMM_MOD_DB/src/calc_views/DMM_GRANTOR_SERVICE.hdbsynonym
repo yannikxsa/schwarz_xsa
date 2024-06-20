@@ -18,5 +18,18 @@
       "schema": "DMM260",
       "database": "XSC"
     }
+  },
+  "QUALITY": {
+    "target": {
+      "object": "QUALITY",
+      "schema": "DMM260",
+      "database": "XSC"
+    }
+  },
+  "GRANTED_ROLES": {
+    "target": {
+      "object": "GRANTED_ROLES",
+      "schema": "SYS"
+    }
   }
 }

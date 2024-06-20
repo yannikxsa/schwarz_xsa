@@ -1,0 +1,12 @@
+{
+	"role": {
+		"name": "ROLE_FILTER_TABLE",
+		"object_privileges": [
+			{
+				"name": "FILTER_TABLE",
+				"type": "TABLE",
+				"privileges": ["SELECT", "INSERT", "UPDATE", "DELETE"]
+			}
+		]
+	}
+}
